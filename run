@@ -7,4 +7,4 @@ else
 fi
 
 cd hugo
-hugo server -b http://"$(hostname -s)":1313 "${@}"
+hugo server -b http://"$(hostname -s)" -p "${PORT}" "${@}"

@@ -3,6 +3,7 @@ MAINTAINER TANABE Ken-ichi <nabeken@tknetworks.org>
 
 ENV GIT_REPO -
 ENV HUGO_DIR /var/cache/hugo
+ENV PORT 1313
 
 WORKDIR /var/cache/hugo
 
