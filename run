@@ -1,0 +1,11 @@
+#!/bin/bash
+cd ..
+if [ "${GIT_REPO}" = "-" ]; then
+  tar -C hugo -zxf -
+else
+  git clone "${GIT_REPO}" hugo
+fi
+
+cd hugo
+
+hugo server -b http://"$(hostname -s)":1313 "${@}"
