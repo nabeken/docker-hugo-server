@@ -6,9 +6,10 @@ else
   git clone "${GIT_REPO}" hugo
   pushd hugo
     if [ "${GITHUB_PR_NUMBER}" != "-" ]; then
-      git fetch origin +refs/pull/"${GITHUB_PR_NUMBER}"/merge && \
-        git checkout -qf FETCH_HEAD
-    elif [ "${GIT_COMMIT}" != "-" ]; then
+      git fetch origin "+refs/pull/${GITHUB_PR_NUMBER}/head:"
+      git checkout -qf FETCH_HEAD
+    fi
+    if [ "${GIT_COMMIT}" != "-" ]; then
       git checkout -qf "${GIT_COMMIT}"
     fi
   popd
