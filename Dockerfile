@@ -2,6 +2,7 @@ FROM nabeken/docker-hugo:latest
 MAINTAINER TANABE Ken-ichi <nabeken@tknetworks.org>
 
 ENV GIT_REPO -
+ENV GIT_COMMIT -
 ENV HUGO_DIR /var/cache/hugo
 ENV PORT 1313
 

@@ -4,6 +4,11 @@ if [ "${GIT_REPO}" = "-" ]; then
   tar -C hugo -zxvf -
 else
   git clone "${GIT_REPO}" hugo
+  [ "${GIT_COMMIT}" = "-" ] || {
+    pushd hugo
+      git checkout -qf "${GIT_COMMIT}"
+    popd
+  }
 fi
 
 cd hugo
