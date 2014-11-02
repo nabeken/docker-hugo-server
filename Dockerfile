@@ -3,6 +3,7 @@ MAINTAINER TANABE Ken-ichi <nabeken@tknetworks.org>
 
 ENV GIT_REPO -
 ENV GIT_COMMIT -
+ENV GITHUB_PR_NUMBER -
 ENV HUGO_DIR /var/cache/hugo
 ENV PORT 1313
 
